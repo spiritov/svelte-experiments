@@ -9,7 +9,7 @@
 - [x] nav
 - [ ] inner nav
 - [x] flag
-- [ ] link with image
+- [ ] link with thumbnail
 - [ ] table
 
 # project-specific components
@@ -23,6 +23,7 @@ used in Jump Fortress ui
 - [ ] division tags
 - [ ] competition overview
 - [ ] player profile
+- [ ] logo spinner
 
 ### table
 

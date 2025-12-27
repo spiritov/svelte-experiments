@@ -21,7 +21,7 @@
 <Nav {session} {route} />
 
 <div class="flex w-full flex-col items-center">
-  <div class="relative flex w-full max-w-5xl flex-col gap-4 bg-base-800 p-8">
+  <div class="relative flex w-full max-w-5xl flex-col gap-4 rounded-layout bg-base-800 p-8">
     {@render children()}
   </div>
 </div>
