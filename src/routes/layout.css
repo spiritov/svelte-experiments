@@ -39,4 +39,8 @@
   button {
     @apply outline-0 focus:outline-0;
   }
+
+  .ellipsis {
+    @apply text-nowrap overflow-ellipsis;
+  }
 }

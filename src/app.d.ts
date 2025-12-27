@@ -14,6 +14,15 @@ declare global {
     error: boolean;
     message: string;
   } | null;
+
+  // used for signed-in users
+  type Session = {
+    readonly $schema?: string;
+    displayName: string;
+    id: string;
+    role: string;
+    steamAvatarUrl: string;
+  };
 }
 
 export {};
