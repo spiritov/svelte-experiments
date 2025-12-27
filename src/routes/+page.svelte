@@ -1,62 +1,18 @@
-<script lang="ts">
-  import Input from '$lib/components/input/Input.svelte';
-  import Label from '$lib/components/input/Label.svelte';
-  import Select from '$lib/components/input/select/Select.svelte';
-
-  //let testInputResponse: Promise<InputResponse> =
+<script>
+  import Button from '$lib/components/input/Button.svelte';
+  import Section from '$lib/components/layout/Section.svelte';
 </script>
 
-<span class="mb-10 text-primary">text input component</span>
+<div class="prose text-content">
+  <code class="bg-base-900 p-1 text-primary">npm run storybook</code>
+  <span>to view components</span>
+</div>
 
-<Label label="test input">
-  <Input
-    type="text"
-    placeholder="placeholder"
-    onsubmit={async (value) => {
-      return { error: true, message: 'success' };
-    }} />
-</Label>
-
-<Label label="test input">
-  <Input
-    type="date"
-    placeholder="placeholder"
-    onsubmit={async (value) => {
-      return { error: true, message: 'success' };
-    }} />
-</Label>
-
-<Label label="test input">
-  <Input
-    type="time"
-    placeholder="placeholder"
-    onsubmit={async (value) => {
-      return { error: true, message: 'success' };
-    }} />
-</Label>
-
-<span>more test..</span>
-
-<Label label="test input">
-  <Select
-    type="button"
-    options={[
-      'one',
-      'two',
-      'three',
-      'four',
-      'five',
-      'six',
-      'seven',
-      'eight',
-      'nine',
-      'ten',
-      'eleven',
-      'twelve',
-      'thirteen',
-      'fourteen'
-    ]}
+<Section label="Test Section">
+  <Button
     onsubmit={async () => {
       return { error: false, message: 'success' };
-    }} />
-</Label>
+    }}
+    ><span class="icon-[mdi--check] w-6"></span>
+  </Button>
+</Section>

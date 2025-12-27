@@ -9,6 +9,7 @@ declare global {
     // interface Platform {}
   }
 
+  // used for input components
   type InputResponse = {
     error: boolean;
     message: string;

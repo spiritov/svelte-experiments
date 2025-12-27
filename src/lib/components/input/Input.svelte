@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import Response from '$lib/components/input/Response.svelte';
+  import SubmitIcon from '$lib/components/input/SubmitIcon.svelte';
 
   type Props = {
     type: string;
@@ -18,7 +19,7 @@
 </script>
 
 <input
-  class="size-full w-full px-2 text-primary"
+  class="size-full px-2 text-primary"
   {type}
   {placeholder}
   bind:value
@@ -31,11 +32,12 @@
 <!-- submit button & response -->
 <button
   in:fade
-  class="relative grid size-10 cursor-pointer place-content-center text-primary"
+  class="relative grid size-10 cursor-pointer place-content-center text-content"
   onclick={() => {
     if (value) {
       response = onsubmit(value);
     }
   }}>
-  <Response {response} />
+  <SubmitIcon {response} />
 </button>
+<Response {response} />

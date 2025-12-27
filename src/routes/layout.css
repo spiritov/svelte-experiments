@@ -10,18 +10,24 @@
 }
 @theme {
   --color-*: initial;
+  /* tailwind colors */
   --color-base-900: oklch(21% 0.006 285.885);
   --color-base-800: oklch(27.4% 0.006 286.033);
   --color-base-700: oklch(37% 0.013 285.805);
+  /* catppuccin colors */
   --color-primary: #b4befe;
   --color-content: #d6dbfe;
   --color-success: #a6e3a1;
   --color-error: #f38ba8;
-  --font-fredoka: 'fredoka', 'ui-sans-serif', 'sans-serif', 'system-ui';
+
+  --font-theme: 'fredoka', 'ui-sans-serif', 'sans-serif', 'system-ui';
+
+  /* 0.375rem for rounded-md */
+  --radius-theme: 0.375rem;
 }
 @layer base {
   :root {
-    @apply bg-base-900 font-fredoka text-base text-content selection:bg-primary/50 selection:text-content;
+    @apply bg-base-900 font-theme text-base text-content selection:bg-primary/50 selection:text-content;
   }
 
   input {

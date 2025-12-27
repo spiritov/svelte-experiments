@@ -2,6 +2,7 @@
   import { fade } from 'svelte/transition';
   import Option from '$lib/components/input/select/Option.svelte';
   import Response from '$lib/components/input/Response.svelte';
+  import SubmitIcon from '$lib/components/input/SubmitIcon.svelte';
 
   type Props = {
     type: 'text' | 'button';
@@ -13,12 +14,14 @@
 
   let { type, options, placeholder = '', message = '', onsubmit }: Props = $props();
 
-  let value: string = $derived(placeholder);
+  let value: string = $state('');
   let response: Promise<InputResponse> = $derived(
     Promise.resolve({ error: false, message: message })
   );
 
   let index: number = $state(0);
+
+  // filtered for autofill
   let derivedOptions: string[] = $derived(options);
   let option: string = $derived(derivedOptions[index]);
   let showOptions: boolean = $state(false);
@@ -44,7 +47,7 @@
 </script>
 
 <input
-  class="size-full w-full px-2 text-left text-primary"
+  class="size-full px-2 text-left text-primary"
   {type}
   {placeholder}
   bind:value
@@ -94,8 +97,9 @@
       response = onsubmit(value);
     }
   }}>
-  <Response {response} />
+  <SubmitIcon {response} />
 </button>
+<Response {response} />
 
 <!-- options -->
 {#if showOptions && derivedOptions.length}
