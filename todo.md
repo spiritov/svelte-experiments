@@ -6,10 +6,9 @@
 - [x] text input
 - [x] select input (options or autofill)
 - [x] section
-- [ ] button select
-- [ ] nav
+- [x] nav
 - [ ] inner nav
-- [ ] flag
+- [x] flag
 - [ ] link with image
 - [ ] table
 
@@ -19,6 +18,7 @@ used in Jump Fortress ui
 
 ### general components
 
+- [ ] button select
 - [ ] class select
 - [ ] division tags
 - [ ] competition overview
