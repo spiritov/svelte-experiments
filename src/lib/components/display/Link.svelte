@@ -8,7 +8,7 @@
   let { src, href, label }: Props = $props();
 </script>
 
-<a class="flex w-fit gap-1 text-primary/75 hover:text-primary hover:underline" {href}>
+<a class="flex w-fit gap-1 text-primary opacity-75 hover:underline hover:opacity-100" {href}>
   <img class="size-6" {src} alt="" />
   <span>{label}</span>
 </a>
