@@ -11,7 +11,7 @@
 </script>
 
 <nav
-  class="sticky z-50 flex h-16 w-full justify-center bg-base-900/50 backdrop-blur-md select-none">
+  class="sticky z-50 flex h-18 w-full justify-center bg-base-900/50 backdrop-blur-md select-none">
   <div class="flex w-full max-w-5xl items-center justify-between text-lg">
     <!-- left nav -->
     <div class="flex h-full grow items-center transition-colors hover:text-content/75">
