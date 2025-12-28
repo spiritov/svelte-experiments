@@ -23,7 +23,7 @@
   --font-theme: 'fredoka', 'ui-sans-serif', 'sans-serif', 'system-ui';
 
   /* 0.75rem for rounded-xl */
-  --radius-layout: 0.5rem;
+  --radius-layout: 0.75rem;
   /* 0.375rem for rounded-md */
   --radius-box: 0.375rem;
 }
@@ -32,11 +32,25 @@
     @apply bg-base-900 font-theme text-base text-content selection:bg-primary/50 selection:text-content;
   }
 
-  input {
+  input,
+  button {
     @apply outline-0 focus:outline-0;
   }
 
-  button {
-    @apply outline-0 focus:outline-0;
+  th,
+  td {
+    @apply px-2 text-center first:rounded-l-box last:rounded-r-box;
+  }
+
+  th {
+    @apply py-1;
+  }
+
+  td {
+    @apply h-10 bg-base-900;
+  }
+
+  tr:hover td {
+    @apply bg-base-900/50;
   }
 }
