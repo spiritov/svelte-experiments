@@ -4,6 +4,7 @@
 
   import Flag from '$lib/components/display/Flag.svelte';
   import Link from '$lib/components/display/Link.svelte';
+  import SelectClass from '../../input/SelectClass.svelte';
 
   type Props = {
     player: Player;
@@ -13,6 +14,11 @@
 </script>
 
 <div class="relative flex h-58 flex-col overflow-hidden rounded-layout bg-base-900">
+  <!-- top right, class select -->
+  <div class="absolute right-0 z-10">
+    <SelectClass />
+  </div>
+
   <!-- center overlay -->
   <div class="absolute top-1/4 left-4 z-10 flex h-1/2 gap-4">
     <!-- avatar -->
@@ -20,7 +26,7 @@
     <div class="relative">
       <!-- display name -->
       <div class="absolute flex h-32 items-center">
-        <span class="rounded-layout bg-base-900 px-2 py-1 pb-4 text-2xl text-primary"
+        <span class="rounded-layout bg-base-900 px-2 py-1 text-2xl text-primary"
           >{player.display_name}</span>
       </div>
     </div>
@@ -32,7 +38,6 @@
   </div>
   <!-- middle -->
   <div class="mask flex h-16 w-full pl-36">
-    <!-- division and flag -->
     <div class="relative z-10 flex items-center gap-2 px-3 py-0">
       <div class="flex items-center gap-1">
         <Flag code={player.country_code} />
