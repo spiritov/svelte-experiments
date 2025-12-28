@@ -39,10 +39,10 @@
   {@const currentRoute: boolean = (route === '/' && label === 'home') || (route !== '/' && route.includes(href))}
 
   <a class="relative px-4 hover:text-content {currentRoute ? 'text-content' : ''}" {href}>
+    <span>{label}</span>
     {#if currentRoute}
       <!-- underline -->
       <hr class="absolute bottom-0 left-1/6 w-2/3 rounded-box border border-primary" />
     {/if}
-    <span>{label}</span>
   </a>
 {/snippet}
