@@ -13,8 +13,8 @@
 
 <table class="border-separate border-spacing-y-0.5 rounded-layout text-sm">
   <!-- header -->
-  <thead class="text-primary/75">
-    <tr class="truncate">
+  <thead class="text-nowrap text-primary/75">
+    <tr>
       <!-- <th class="w-number">{content}</th> -->
       {@render header()}
     </tr>
@@ -23,7 +23,7 @@
   <!-- rows -->
   <tbody>
     {#each data as object}
-      <tr transition:fade class="my-1 truncate">
+      <tr transition:fade class="my-1">
         {@render row(object)}
         <!-- <td>{content}</td> -->
       </tr>
