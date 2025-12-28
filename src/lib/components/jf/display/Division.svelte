@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { divisions } from '$lib/src/divisions';
-
   interface Props {
     div: string;
   }
