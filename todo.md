@@ -9,8 +9,8 @@
 - [x] nav
 - [x] inner nav
 - [x] flag
-- [ ] link with thumbnail
-- [ ] table
+- [x] link with thumbnail
+- [x] table
 
 # project-specific components
 
@@ -18,21 +18,21 @@ used in Jump Fortress ui
 
 ### general components
 
-- [ ] button select
+- [x] button select
 - [ ] class select
-- [ ] division tags
+- [x] division tags
 - [ ] competition overview
 - [ ] player profile
 - [ ] logo spinner
 
 ### table
 
-- [ ] table map
-- [ ] table player
+- [x] table map
+- [x] table player
 
 ### player profile
 
 - [ ] player profile
 - [ ] player overview
 - [ ] points
-- [ ] rocket launcher
+- [x] rocket launcher
