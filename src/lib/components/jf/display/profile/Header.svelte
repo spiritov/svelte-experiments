@@ -13,45 +13,44 @@
   let { player }: Props = $props();
 </script>
 
-<div class="relative flex h-58 flex-col overflow-hidden rounded-layout bg-base-900">
-  <!-- top right, class select -->
-  <div class="absolute right-0 z-10">
-    <SelectClass />
+<!-- container -->
+<div
+  class="absolute top-0 left-0 flex h-64 w-full flex-col overflow-hidden rounded-t-layout bg-base-900">
+  <!-- absolute avatar -->
+  <img
+    class="absolute top-1/3 left-8 z-10 size-32 rounded-layout drop-shadow-md/50"
+    src={player.steam_avatar_url}
+    alt="" />
+  <!-- absolute display name -->
+  <div class="absolute top-36 left-0 z-10 ml-44">
+    <span class="rounded-layout bg-base-900 px-2 py-1 pb-12 text-2xl text-primary"
+      >{player.display_name}</span>
+  </div>
+  <!-- absolute class select -->
+  <div class="absolute right-8 bottom-0.5 z-20 flex">
+    <SelectClass selected={player.preferred_class} onsubmit={() => {}} />
   </div>
 
-  <!-- center overlay -->
-  <div class="absolute top-1/4 left-4 z-10 flex h-1/2 gap-4">
-    <!-- avatar -->
-    <img class="size-32 rounded-layout drop-shadow-lg/50" src={player.steam_avatar_url} alt="" />
-    <div class="relative">
-      <!-- display name -->
-      <div class="absolute flex h-32 items-center">
-        <span class="rounded-layout bg-base-900 px-2 py-1 text-2xl text-primary"
-          >{player.display_name}</span>
-      </div>
-    </div>
-  </div>
-  <!-- top half, map bg -->
-  <div
-    class="flex h-32 w-full mask-b-from-90% bg-cover bg-center"
-    style:background-image={`url("https://tempusplaza.xyz/map-backgrounds/${'jump_escape_rc4'}.jpg")`}>
-  </div>
-  <!-- middle -->
-  <div class="mask flex h-16 w-full pl-36">
-    <div class="relative z-10 flex items-center gap-2 px-3 py-0">
-      <div class="flex items-center gap-1">
-        <Flag code={player.country_code} />
-        <span class="text-content/75">{player.country}</span>
-      </div>
-      <span class="icon-[mdi--circle] size-1.5 text-content/75"></span>
+  <!-- top, map bg image -->
+  <img
+    class="h-2/3 w-full mask-b-from-95% object-cover object-center"
+    src="https://tempusplaza.xyz/map-backgrounds/{'jump_escape_rc4'}.jpg"
+    alt="" />
+  <!-- middle, country & division -->
+  <div class="relative z-10 ml-40 h-1/6 px-3 pt-3">
+    <div class="flex items-center gap-1 text-content/75">
+      <Flag code={player.country_code} country={player.country} />
+      <span class="icon-[mdi--circle-medium] size-3.5"></span>
       <span class="text-division-{player.soldier_division?.toLowerCase() ?? ''}">
         {player.soldier_division} Soldier
       </span>
     </div>
   </div>
-  <!-- bottom -->
-  <div class="relative z-10 flex h-10 w-full items-center gap-2 px-4">
+  <!-- bottom, links -->
+  <div class="ml-8 flex grow items-center gap-2 text-sm">
     <Link label="Tempus" src={tempus} href={`https://tempus2.xyz/players/${player.tempus_id}`} />
     <Link label="Plaza" src={plaza} href={`https://tempusplaza.xyz/players/${player.tempus_id}`} />
   </div>
 </div>
+
+<hr class="h-58 w-full" />
