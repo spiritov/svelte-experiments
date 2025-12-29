@@ -22,7 +22,7 @@ used in Jump Fortress ui
 - [x] class select
 - [x] division tags
 - [ ] competition overview
-- [ ] player profile
+- [x] player profile
 - [ ] logo spinner
 
 ### table
@@ -32,7 +32,6 @@ used in Jump Fortress ui
 
 ### player profile
 
-- [ ] player profile
 - [x] player overview
-- [ ] points
+- [x] points
 - [x] rocket launcher
