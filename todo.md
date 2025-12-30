@@ -21,7 +21,7 @@ used in Jump Fortress ui
 - [x] button select
 - [x] class select
 - [x] division tags
-- [ ] competition overview
+- [x] competition overview
 - [x] player profile
 - [ ] logo spinner
 
