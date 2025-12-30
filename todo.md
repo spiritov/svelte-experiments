@@ -23,7 +23,7 @@ used in Jump Fortress ui
 - [x] division tags
 - [x] competition overview
 - [x] player profile
-- [ ] logo spinner
+- [x] logo
 
 ### table
 
