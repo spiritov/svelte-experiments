@@ -14,6 +14,12 @@ const preview: Preview = {
         date: /Date$/i
       }
     }
+  },
+  initialGlobals: {
+    // Set the initial/default background color by name (e.g., 'light', 'dark', or 'maroon')
+    backgrounds: {
+      value: 'dark'
+    }
   }
 };
 

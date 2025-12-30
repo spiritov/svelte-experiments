@@ -22,7 +22,7 @@
   <a
     class="relative px-2 hover:text-content {currentRoute ? 'text-content' : ''}"
     href="/{parentRoute}/{label}">
-    <span>{label} route</span>
+    <span>{label}</span>
     {#if currentRoute}
       <hr class="absolute bottom-0 left-1/12 z-10 w-5/6 rounded-box border border-primary" />
     {/if}

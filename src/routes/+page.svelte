@@ -7,9 +7,6 @@
   import InnerNav from '$lib/components/layout/InnerNav.svelte';
   import Section from '$lib/components/layout/Section.svelte';
 
-  import rl_stock from '$lib/assets/tf/rl_stock.png';
-  import rl_original from '$lib/assets/tf/rl_original.png';
-  import rl_mangler from '$lib/assets/tf/rl_mangler.png';
   import DivisionTag from '$lib/components/display/DivisionTag.svelte';
   import TablePlayer from '$lib/components/display/table/TablePlayer.svelte';
   import TableMap from '$lib/components/display/table/TableMap.svelte';
@@ -66,50 +63,7 @@
 </div>
 
 <Section label="Test Section">
-  <Button
-    onsubmit={async () => {
-      return { error: false, message: 'success' };
-    }}
-    ><span class="icon-[mdi--check] w-6"></span>
-  </Button>
-
   <InnerNav {route} parentRoute={'monthly'} pages={['', 'monthly', 'competition', 'other']} />
-
-  <Link src="" href="/" label="aaa" />
-
-  <Table data={[{}]}>
-    {#snippet header()}
-      <th class="w-1/14">rank</th>
-      <th class="w-1/14">div rank</th>
-      <th></th>
-      <th class="text-ctp-lavender-50/75 w-1/12">monthlies played</th>
-      <th class="text-ctp-lavender-50/75 w-1/12">MOTWs played</th>
-      <th class="w-1/4">last 3 monthlies</th>
-      <th class="text-ctp-lavender-50/75 w-1/8">total points</th>
-    {/snippet}
-    {#snippet row()}
-      <td>#1</td>
-      <td>#1</td>
-      <td>
-        <TablePlayer {player} />
-      </td>
-      <td class="text-ctp-lavender-50/75">4</td>
-      <td class="text-ctp-lavender-50/75">10</td>
-      <td><TableMap map="jump_flood" /></td>
-      <td>900000</td>
-    {/snippet}
-  </Table>
-
-  <SelectButton
-    label="fav launcher"
-    options={[
-      { src: rl_stock, value: 'Stock' },
-      { src: rl_original, value: 'Original' },
-      { src: rl_mangler, value: 'Mangler' }
-    ]}
-    withNone={true}
-    selected="Original"
-    onsubmit={(value: string) => {}} />
 
   <DivisionTag div="Diamond" />
 </Section>

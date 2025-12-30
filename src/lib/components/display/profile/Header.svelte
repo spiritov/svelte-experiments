@@ -4,7 +4,7 @@
 
   import Flag from '$lib/components/display/Flag.svelte';
   import Link from '$lib/components/display/Link.svelte';
-  import ClassSelect from '../../input/ClassSelect.svelte';
+  import SelectClass from '$lib/components/input/select/SelectClass.svelte';
   import RocketLauncher from '../RocketLauncher.svelte';
   import Points from './Points.svelte';
 
@@ -33,7 +33,7 @@
   <!-- absolute bottom, class select & points -->
   <div class="absolute right-6 bottom-1 z-20 flex flex-row-reverse items-end">
     <div class="flex">
-      <ClassSelect
+      <SelectClass
         selected={player.preferred_class}
         onsubmit={(value) => {
           selected = value;
