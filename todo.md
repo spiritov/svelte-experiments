@@ -1,5 +1,3 @@
-- [ ] update repo name..
-
 # base components
 
 - [x] button
